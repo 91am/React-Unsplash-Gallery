@@ -8,7 +8,7 @@ function App() {
     <main className="flex w-screen h-screen justify-center">
       <div className="max-w-7xl">
         <h1 className="text-7xl">Unsplash Gallery</h1>
-        <div className='flex'>
+        <div className="flex">
           <label className="input input-bordered flex items-center gap-2">
             <input type="text" className="grow" placeholder="Search" />
             <svg
@@ -27,7 +27,11 @@ function App() {
           <button className="btn">Button</button>
         </div>
         <div className="flex flex-wrap gap-8">
-          <Card></Card>
+          <Card
+            url="https://images.unsplash.com/photo-1462275646964-a0e3386b89fa?q=80&w=3028&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+            title="Hola"
+            location="Terrassa"
+          ></Card>
           <Card></Card>
           <Card></Card>
         </div>
