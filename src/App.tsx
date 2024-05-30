@@ -6,13 +6,20 @@ function App() {
 fetch("https://jsonplaceholder.typicode.com/todos/1")
   .then((response) => response.json())
   .then((json) => console.log(json));
+
+  const [title, settitle]=useState("Japon")
+  const handleInputChange=(event)=>{
+    settitle(event?.target.value);
+  };
+
+
   return (
     <main className="flex w-screen h-screen justify-center">
       <div className="max-w-7xl">
         <h1 className="text-7xl">Unsplash Gallery</h1>
         <div className="flex">
           <label className="input input-bordered flex items-center gap-2">
-            <input type="text" className="grow" placeholder="Search" />
+            <input type="text" className="grow" placeholder="Search" onChange={handleInputChange} />
             <svg
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 16 16"
@@ -26,12 +33,15 @@ fetch("https://jsonplaceholder.typicode.com/todos/1")
               />
             </svg>
           </label>
-          <button className="btn">Button</button>
+          <button onClick={()=>{
+settitle("Sakura")
+
+          }} className="btn">Button</button>
         </div>
         <div className="flex flex-wrap gap-8">
           <Card
             url="https://images.unsplash.com/photo-1462275646964-a0e3386b89fa?q=80&w=3028&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-            title="Hola"
+            title={title}
             location="Terrassa"
           ></Card>
           <Card></Card>
