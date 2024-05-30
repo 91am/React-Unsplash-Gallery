@@ -3,7 +3,9 @@ import Card from "./components/Card"
 
 function App() {
   const [count, setCount] = useState(0)
-
+fetch("https://jsonplaceholder.typicode.com/todos/1")
+  .then((response) => response.json())
+  .then((json) => console.log(json));
   return (
     <main className="flex w-screen h-screen justify-center">
       <div className="max-w-7xl">

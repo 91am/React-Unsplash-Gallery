@@ -11,7 +11,6 @@ function Card({url, title, location, date}){
           <p>{location}</p>
           <p>{date}</p>
           <div className="card-actions justify-end">
-            
           </div>
         </div>
       </div>
